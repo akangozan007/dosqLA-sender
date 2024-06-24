@@ -16,6 +16,7 @@ Including another URLconf
 # from django.contrib import admin
 # from django.urls import path
 from . import views
+from login import views as Views_Login
 from django.conf.urls import url, include
 # from django.http import HttpResponse
 # def index(request):
@@ -25,6 +26,6 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('', index),
     url(r'^$', views.index, name='index'),
-    url(r'^login/$', views.login, name='login'),
+    url(r'^login/$', include(about.urls)),
     url(r'^koneksi/$', views.cekdb, name='cekdb')
 ]
