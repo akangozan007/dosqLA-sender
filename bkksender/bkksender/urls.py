@@ -18,6 +18,7 @@ Including another URLconf
 from . import views
 from login import views as Views_Login
 from django.conf.urls import url, include
+from django.urls import path
 # from django.http import HttpResponse
 # def index(request):
 #     return HttpResponse("Hello, world. laman Index BotSender")
@@ -26,6 +27,9 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     # path('', index),
     url(r'^$', views.index, name='index'),
-    url(r'^login/$', include(about.urls)),
+    # url(r'^login/$', include(about.urls)),
+    # url(r'^login/$', Views_Login.index, name='index'),
+    # path('login', include('login.urls')),
+    url(r'^login/$', include('login.urls')),
     url(r'^koneksi/$', views.cekdb, name='cekdb')
 ]

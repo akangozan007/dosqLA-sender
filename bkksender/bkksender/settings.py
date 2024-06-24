@@ -11,9 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# TEMPLATES_DIR=BASE_DIR / 'templates'
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,14 +32,13 @@ ALLOWED_HOSTS = ['10.11.12.3']
 # Application definition
 
 INSTALLED_APPS = [
+    'login',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    'login',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,9 @@ ROOT_URLCONF = 'bkksender.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/home/razan/dosqLA-sender/bkksender/frontend'],
+        # 'DIRS': ['frontend'],
+        'DIRS': [''],
+        #  'DIRS': [os.path.join(BASE_DIR, 'frontend')],  # Tambahkan direktori template global
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
