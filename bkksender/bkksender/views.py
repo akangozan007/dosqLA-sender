@@ -1,9 +1,20 @@
 from django.http import HttpResponse
+# import tags template render
+from django.shortcuts import render
+root_front = 'bkksender/frontend/'
 import MySQLdb
+
 
 # Hello World
 def index(request):
-    return HttpResponse("Hello, world. laman Index BotSender")
+    # template tags
+    context = {
+        'Heading':'Hello, world. laman Index BotSender',
+        'judulSitus':'Selamat Datang Di BKK Sender',
+        'BrandPage':'BKKSender',
+    }
+    # ./template tags
+    return render(request, f"{root_front}bkksender/index.html", context)
 
 def login(request):
     return HttpResponse("Hello, world. laman login BotSender")

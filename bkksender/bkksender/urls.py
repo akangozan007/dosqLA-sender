@@ -31,5 +31,6 @@ urlpatterns = [
     # url(r'^login/$', Views_Login.index, name='index'),
     # path('login', include('login.urls')),
     url(r'^login/$', include('login.urls')),
+    url(r'^dashboard/$', include('dashboard.urls')),
     url(r'^koneksi/$', views.cekdb, name='cekdb')
 ]
