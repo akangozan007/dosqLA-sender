@@ -12,6 +12,10 @@ def index(request):
         'Heading':'Hello, world. laman Index BotSender',
         'judulSitus':'Selamat Datang Di BKK Sender',
         'BrandPage':'BKKSender',
+         'nav': [
+            ['/','Home'],
+            ['/login','login']
+        ]
     }
     # ./template tags
     return render(request, f"{root_front}bkksender/index.html", context)

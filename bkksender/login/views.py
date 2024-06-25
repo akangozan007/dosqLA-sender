@@ -8,6 +8,10 @@ def index(request):
     context = {
         'TitlePage':'Login Panel BKKSender',
         'BrandPage':'BKKSender',
+        'nav': [
+            ['/','Home'],
+            ['/login','login']
+        ]
     }
     return render(request, f'{root_front}login/index.html', context)
 

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +36,7 @@
         <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
       </button>
       <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      
         <li>
           <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
             <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
@@ -65,15 +67,21 @@
     <div>
       <h3 class="float-md-start mb-0">{{ BrandPage }}</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+        {# template tags #}
+        {% for link,name in nav %}
+        <a class="nav-link fw-bold py-1 px-0" href=" {{ link }} ">{{ name }}</a>     
+        {% endfor %}
+        <!-- <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a> -->
+        <!-- <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
+        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a> -->
       </nav>
     </div>
   </header>
 
   <main class="px-3">
     <h1>Cover your page.</h1>
+   
+    <img src="{% static 'bkksender/gambar/me1.png' %}" class="img-fluid" alt="">
     <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
     <p class="lead">
       <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a>
