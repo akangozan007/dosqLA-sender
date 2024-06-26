@@ -6,7 +6,12 @@ root_front = 'dashboard/frontend/'
 # Laman Login
 def index(request):
     context = {
-        'TitlePage':'Login Panel BKKSender',
+        'TitlePage':'Admin Panel BKKSender',
+        'Heading':'Admin Panel BKKSender',
+         'nav': [
+            ['/','dashboard'],
+            ['/logout','profile','sender tools'],
+        ]
     }
     return render(request, f'{root_front}dashboard/index.html', context)
 
