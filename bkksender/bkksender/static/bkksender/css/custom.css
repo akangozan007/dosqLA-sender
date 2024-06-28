@@ -1,0 +1,31 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    background-image:url('../gambar/background_bkk_sender.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-header {
+    background-color:#083b7a ;
+}
+footer{
+    background-color: #083b7a;
+}
+.text-kuning{
+    color: #eed643 ;
+}
+.text-oren{
+    color:  #eea915 ;
+}
+  /* warna */
+  /* 
+    putih : #fcfafc
+    biru : #083b7a
+    kuning : #eed643
+    orange : #eea915  
+
+  */
