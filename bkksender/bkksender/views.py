@@ -15,7 +15,9 @@ def index(request):
          'nav': [
             ['/','Home'],
             ['/login','login']
-        ]
+        ],
+        'bkksendercss_templates' : 'bkksender/frontend/bkksender/snippets/css.html',
+        'bkksenderjs_templates' : 'bkksender/frontend/bkksender/snippets/js.html',
     }
     # ./template tags
     return render(request, f"{root_front}bkksender/index.html", context)

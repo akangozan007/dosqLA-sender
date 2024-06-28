@@ -11,7 +11,10 @@ def index(request):
          'nav': [
             ['/','dashboard'],
             ['/logout','profile','sender tools'],
-        ]
+            ],
+        'dashcss_templates':'dashboard/frontend/dashboard/snippets/css_templates.html',
+        'dashjs_templates':'dashboard/frontend/dashboard/snippets/js_templates.html',
+        
     }
     return render(request, f'{root_front}dashboard/index.html', context)
 

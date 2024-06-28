@@ -5,13 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ judulSitus }}</title>
-   <!-- Css Bootstrap -->
-    <link rel="stylesheet" href="{% static 'bkksender/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'bkksender/css/cover.css' %}">
-  <!-- ./Css Bootstrap -->
-  <!-- Css Custom  -->
-  <link rel="stylesheet" href="{% static 'bkksender/css/custom.css' %}">
-  <!-- ./Css Custom -->
+    {% include bkksendercss_templates %}
 </head>
 <body class="d-flex h-100 text-center text-bg-dark">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -64,7 +58,5 @@
   </footer>
 </div>
     </body>
-    <!-- Js Bootstrap -->
-    <script src="{% static 'bkksender/js/bootstrap.bundle.min.js' %}"></script>
-    <!-- ./Js Bootstrap -->
+    {% include bkksenderjs_templates %}
     </html>
