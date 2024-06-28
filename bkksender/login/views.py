@@ -11,7 +11,10 @@ def index(request):
         'nav': [
             ['/','Home'],
             ['/login','login']
-        ]
+        ],
+        'css_templates' : 'login/frontend/login/snippets/css_templates.html',
+        'js_templates' : 'login/frontend/login/snippets/css_templates.html',
+
     }
     return render(request, f'{root_front}login/index.html', context)
 
