@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ro5b-35oh=o4)w#pqhx(saoi0w799c5=#a@tdhu+8#@q@%cz3l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.11.12.3']
+ALLOWED_HOSTS = ['10.11.12.3', '10.11.12.174', 'cloudtkj.com']
 
 
 # Application definition
@@ -91,7 +91,7 @@ DATABASES = {
         'NAME': 'bkksender',               # Nama database Anda
         'USER': 'root',               # Nama pengguna database Anda
         'PASSWORD': '12345678',              # Kata sandi pengguna database Anda
-        'HOST': '10.11.12.3',               # Alamat server MariaDB (misal: 'localhost' atau IP server)
+        'HOST': 'localhost',               # Alamat server MariaDB (misal: 'localhost' atau IP server)
         'PORT': '3306',                        # Port MariaDB (default: 3306)
     }
 }
