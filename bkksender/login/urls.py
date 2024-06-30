@@ -7,6 +7,7 @@ from . import views
 urlpatterns = [
     # url(r'^$', views.index, name='index'),
     path('', views.index, name='index'),
+    url('logout/', views.logout, name='logout'),
     # url /keahlian/ subfolder app login
     # url(r'^keahlian/$', views.skills), 
 ]

@@ -2,9 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 # Home Page untuk app /login/
+# template login django import
+from django.contrib.auth import login,authenticate
 root_front = 'dashboard/frontend/'
 # Laman Login
 def index(request):
+
     context = {
         'TitlePage':'Admin Panel BKKSender',
         'Heading':'Admin Panel BKKSender',
@@ -17,5 +20,6 @@ def index(request):
         
     }
     return render(request, f'{root_front}dashboard/index.html', context)
+
 
 
